@@ -1,0 +1,73 @@
+// 
+// Sidebar
+// 
+
+@include media-breakpoint-up(lg) {
+    #sideBar {
+        display: flex;
+        flex-direction: column;
+        width: $sidebar-base-width;
+        height: 100vh;
+    }
+}
+
+// 
+// About
+// 
+
+section.about {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 7rem;
+    max-width: 70rem;
+
+    .about-content {
+        width: 100%;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    section.about {
+        min-height: 100vh;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    section.about {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+// 
+// Icons
+// 
+
+// Styling for the rounded social media links
+
+.social-icons {
+    .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 3.5rem;
+        width: 3.5rem;
+        background-color: $gray-700;
+        color: $white;
+        border-radius: 100%;
+        font-size: 1.5rem;
+        margin-right: 1.5rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            background-color: $primary;
+        }
+    }
+}
